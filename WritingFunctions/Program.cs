@@ -5,7 +5,13 @@
 //decimal taxToPay = CalculateTax(amount: 149, twoLetterRegionCode: "FR");
 //WriteLine($"You must pay {taxToPay} in tax.");
 
-RunCardinalToOrdinal();
+//RunCardinalToOrdinal();
+
+//RunFactorial();
+
+//RunFibImperative();
+
+RunFibFunctional();
 
 static void TimesTable(byte number)
 {
@@ -62,6 +68,9 @@ static decimal CalculateTax(decimal amount, string twoLetterRegionCode)
 
 WriteLine();
 
+
+
+
 static string CardinalToOrdinal(int number)
 {
     switch (number)
@@ -91,4 +100,92 @@ static void RunCardinalToOrdinal()
         Write($"{CardinalToOrdinal(i)} ");
     }
     WriteLine();
+}
+
+
+static int Factorial(int number)
+{
+    if (number < 1)
+    {
+        return 0;
+    }
+    else if (number == 1)
+    {
+        return 1;
+    }
+    else
+    {
+        checked // for overflow
+        {
+            return number * Factorial(number - 1);
+        }
+    }
+}
+
+static void RunFactorial()
+{
+    for (int i = 1; i < 15; i++)
+        try
+        {
+            {
+                WriteLine($"{i}! = {Factorial(i):N0}");
+            }
+
+        }
+        catch (System.OverflowException)
+        {
+            WriteLine($"{i}! is too big for a 32-bit integer.");
+        }
+
+}
+
+// Imperative and Declarative Function Implementation
+
+// imperative style
+
+static int FibImperative(int term)
+{
+    if (term == 1)
+    {
+        return 0;
+    }
+    else if (term == 2)
+    {
+        return 1;
+    }
+    else
+    {
+        return FibImperative(term - 1) + FibImperative(term - 2);
+    }
+}
+
+static void RunFibImperative()
+{
+    for (int i = 1; i <= 30; i++)
+    {
+        WriteLine("The {0} term of the Fibonacci sequence is {1:N0}.",
+            arg0: CardinalToOrdinal(i),
+            arg1: FibImperative(term: i));
+    }
+}
+
+WriteLine();
+
+// declarative style 
+
+static int FibFunctional(int term) => term switch
+{
+    1 => 0,
+    2 => 1,
+    _ => FibFunctional(term - 1) + FibFunctional(term - 2)
+};
+
+static void RunFibFunctional()
+{
+    for (int i = 1; i <=30; i++)
+    {
+        WriteLine("The {0} term of the Fibonacci sequence is {1:N0}.",
+            arg0: CardinalToOrdinal(i),
+            arg1: FibFunctional(term: i));
+    }
 }
