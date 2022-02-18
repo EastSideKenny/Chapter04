@@ -2,9 +2,10 @@
 
 //TimesTable(6);
 
-decimal taxToPay = CalculateTax(amount: 149, twoLetterRegionCode: "FR");
-WriteLine($"You must pay {taxToPay} in tax.");
+//decimal taxToPay = CalculateTax(amount: 149, twoLetterRegionCode: "FR");
+//WriteLine($"You must pay {taxToPay} in tax.");
 
+RunCardinalToOrdinal();
 
 static void TimesTable(byte number)
 {
@@ -57,4 +58,37 @@ static decimal CalculateTax(decimal amount, string twoLetterRegionCode)
     }
 
     return amount * rate;
+}
+
+WriteLine();
+
+static string CardinalToOrdinal(int number)
+{
+    switch (number)
+    {
+        case 11: // special case for 11th to 13th
+        case 12:
+        case 13:
+            return $"{number}th";
+        default:
+            int lastDigit = number % 10;
+
+            string suffix = lastDigit switch
+            {
+                1 => "st",
+                2 => "nd",
+                3 => "rd",
+                _ => "th"
+            };
+            return $"{number}{suffix}";
+    }
+}
+
+static void RunCardinalToOrdinal()
+{
+    for (int i = 1; i <= 40; i++)
+    {
+        Write($"{CardinalToOrdinal(i)} ");
+    }
+    WriteLine();
 }
