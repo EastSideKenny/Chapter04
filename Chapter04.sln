@@ -5,9 +5,17 @@ VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WritingFunctions", "WritingFunctions\WritingFunctions.csproj", "{64813B86-0BCD-45D7-9567-386AB7BB53E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Debugging", "Debugging\Debugging.csproj", "{ECCCBAD0-3C37-470A-9632-C51D43967E61}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Debugging", "Debugging\Debugging.csproj", "{ECCCBAD0-3C37-470A-9632-C51D43967E61}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Instrumenting", "Instrumenting\Instrumenting.csproj", "{1E45124B-64CA-49B4-A06A-017BA1D40A76}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Instrumenting", "Instrumenting\Instrumenting.csproj", "{1E45124B-64CA-49B4-A06A-017BA1D40A76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorLib", "CalculatorLib\CalculatorLib.csproj", "{328E482F-16D9-4EB7-8A4F-E59853BCC8A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorLibUnitTests", "CalculatorLibUnitTests\CalculatorLibUnitTests.csproj", "{2C7E07FC-069C-468C-8BDE-461896326615}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CallStackExceptionHandlingLib", "CallStackExceptionHandlingLib\CallStackExceptionHandlingLib.csproj", "{A8799F00-7BA5-490E-9297-ACC7312A2B62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CallStackExceptionHandling", "CallStackExceptionHandling\CallStackExceptionHandling.csproj", "{44D66DF7-F1DE-4633-82F4-6D056E638F6C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +35,22 @@ Global
 		{1E45124B-64CA-49B4-A06A-017BA1D40A76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E45124B-64CA-49B4-A06A-017BA1D40A76}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E45124B-64CA-49B4-A06A-017BA1D40A76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{328E482F-16D9-4EB7-8A4F-E59853BCC8A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{328E482F-16D9-4EB7-8A4F-E59853BCC8A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{328E482F-16D9-4EB7-8A4F-E59853BCC8A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{328E482F-16D9-4EB7-8A4F-E59853BCC8A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C7E07FC-069C-468C-8BDE-461896326615}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C7E07FC-069C-468C-8BDE-461896326615}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C7E07FC-069C-468C-8BDE-461896326615}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C7E07FC-069C-468C-8BDE-461896326615}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8799F00-7BA5-490E-9297-ACC7312A2B62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8799F00-7BA5-490E-9297-ACC7312A2B62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8799F00-7BA5-490E-9297-ACC7312A2B62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8799F00-7BA5-490E-9297-ACC7312A2B62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44D66DF7-F1DE-4633-82F4-6D056E638F6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44D66DF7-F1DE-4633-82F4-6D056E638F6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44D66DF7-F1DE-4633-82F4-6D056E638F6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44D66DF7-F1DE-4633-82F4-6D056E638F6C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
